@@ -1,0 +1,14 @@
+{
+  "name": "ku-softarch-hw7",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:sirateek/ku-softarch-hw7.git",
+  "author": "Siratee K. <sirateek@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "node ."
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
