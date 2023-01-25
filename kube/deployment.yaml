@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myhelloworld
+spec:
+  selector:
+    matchLabels:
+      app: myhelloworld
+  template:
+    metadata:
+      labels:
+        app: myhelloworld
+    spec:
+      imagePullSecrets:
+        - name: azure-secret
+      containers:
+        - name: myhelloworld
+          image: softwarearch.azurecr.io/helloworld
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 3000
